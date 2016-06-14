@@ -1,3 +1,3 @@
-The OpenShift `jbossas` cartridge documentation can be found at:
+# ngTime
 
-https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbossas/README.md
+Angular2 TimeRecordingApp build with angular-cli
