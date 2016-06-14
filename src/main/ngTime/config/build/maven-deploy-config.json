@@ -1,0 +1,8 @@
+{
+    "groupId"      : "de.gedoplan",   
+    "artifactId"   : "{name}",        
+    "buildDir"     : "dist",          
+    "finalName"    : "{name}",        
+    "type"         : "war",           
+    "fileEncoding" : "utf-8"          
+}

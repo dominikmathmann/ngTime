@@ -1,0 +1,54 @@
+<div style="float: left">
+    <h2> Tätigkeitsnachweis </h2>
+    <div contentEditable="true"><br>      Kunde: <br> <div contentEditable="true"><b>...</b> </div>   </div>
+</div>
+<div style="float: right">
+    <center>
+        <div>            
+            <img src="app/assets/images/gedo.png" alt="gedoplan" width="300">
+        </div>
+    </center>
+    <br/>
+    <div>GEDOPLAN GmbH <br>Stieghorster Straße 60 <br>33605 Bielefeld <br><br>Tel.: 0521 / 2088910 <br>Fax.: 0521 / 2088945 <br></div>
+</div>
+<div style="clear: both;">
+    <div>
+        <table>
+            <tr>
+                <td class="export-cell export-header">Datum</td>
+                <td class="export-cell export-header">Projekt</td>
+                <td class="export-cell export-header">Zeit</td>
+                <td class="export-cell export-header">Tätigkeit</td>
+            </tr>
+        </table>
+        <table *ngFor="let day of records">
+            <tr *ngFor="let record of day.entries">
+                <td class="export-cell">{{record.date | dedate}}</td>
+                <td class="export-cell">{{record.project}}</td>
+                <td class="export-cell">{{record.time | timeToHours}}</td>
+                <td class="export-cell">{{record.tasks}}</td>
+            </tr>
+            <tr>
+                <td class="export-cell"></td>
+                <td class="export-cell"></td>
+                <td class="export-cell"><b>{{day.sum | timeToHours}}</b></td>
+                <td class="export-cell"></td>
+            </tr>
+            <tr>
+                <td colspan="4"><hr style="border-color: black;"/></td>
+            </tr>
+        </table>
+
+
+        <table>
+            <tr>
+                <td class="export-cell"></td>
+                <td class="export-cell"></td>
+                <td class="export-cell"><b>{{recordsSum | timeToHours}}</b></td>
+                <td class="export-cell"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<br/> <br/>                Ort,Datum / Unterschrift<br> <br>        _______________________________________________________    
+

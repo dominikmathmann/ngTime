@@ -1,0 +1,59 @@
+/* Coolors Exported Palette - coolors.co/06aed5-086788-f0c808-fff1d0-dd1c1a */
+/*
+$color1: #06aed5; //rgba(6, 174, 213, 100)
+$color2: #086788; //rgba(8, 103, 136, 100)
+$color3: #f0c808; //rgba(240, 200, 8, 100)
+$color4: #fff1d0; //rgba(255, 241, 208, 100)
+$color5: #dd1c1a; //rgba(221, 28, 26, 100)
+*/
+
+.navbar-header, .navbar-static-top{
+    background-color: #286090;
+}
+
+.navbar-brand{
+    color: white !important;
+}
+
+
+a{
+    color: #086788;
+}
+
+.badget-full{
+    width: 100%;
+    font-size: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.panel-yellow{
+    background-color: #f0c808;
+}
+.panel-white{
+    background-color: #fff1d0;
+}
+.panel-red{
+    background-color: #dd1c1a;
+}
+
+.panel-green{
+    background-color: #289059;
+}
+
+.panel-footer{
+    color: black;
+}
+
+.btn-lblue{
+    background-color: #06aed5;
+    color: black;
+}
+
+.btn-full{
+    width: 100%;
+}
+
+.controls{
+    margin-bottom: 2em;
+}

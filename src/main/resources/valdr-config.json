@@ -1,0 +1,4 @@
+{
+  "modelPackages": ["de.dd.timesheet.model"],
+  "corsAllowOriginPattern": "*"
+}

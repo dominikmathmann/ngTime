@@ -1,0 +1,52 @@
+<div class="panel panel-primary">
+    <form #form="ngForm" novalidate>
+        <div class="panel-footer">
+            <div class="row controls">
+                <div class="col-md-3 col-md-offset-4 col-sm-10">
+                    <button on-click="recordingService.running?recordingService.stop():recordingService.start()" class="btn btn-primary btn-lg btn-full">
+                        {{recordingService.running?'Stop':'Start'}}        
+                    </button>
+                </div>
+            </div>
+            <div class="row controls">
+                <div class="col-md-3 col-md-offset-4 col-sm-10">
+                    <span class="badge badget-full panel-green ">{{recordingService.getTime()}}</span>
+                </div>
+            </div>
+
+
+            <div class="row form-group">
+                <div class="col-md-4 col-md-offset-1 col-sm-10">
+                    <label for="project">Projekt:</label>
+                    <ddts-select-project bindon-project="recordingService.activeRecord.project"></ddts-select-project>
+                    <!--<input required ngControl="project" type="text" id="project" class="form-control" bindon-ngModel="recordingService.activeRecord.project">-->
+                </div>
+                <div class="col-md-4 col-md-offset-1 col-sm-10">
+                    <label for="description">Beschreibung</label>
+                    <input required ngControl="description" type="text" id="description" class="form-control" bindon-ngModel="recordingService.activeRecord.description">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-4 col-md-offset-1 col-sm-10">
+                    <label for="project">Start:</label>
+                    <date-input bindon-ngModel="recordingService.activeRecord.startTime" style-class="form-control"></date-input>
+                </div>
+                <div class="col-md-4 col-md-offset-1 col-sm-10">
+                    <label for="description">Ende:</label>
+                    <!--<input tsdate type="text" id="end-time" class="form-control" bindon-ngModel="recordingService.activeRecord.endTime">-->
+                    <date-input bindon-ngModel="recordingService.activeRecord.endTime" style-class="form-control"></date-input>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 col-md-offset-2">
+                    <button on-click="recordingService.save()" class="btn btn-primary btn-lg btn-full " bind-disabled="!form.valid || recordingService.running">Speichern</button>
+                </div>
+                <div class="col-md-2 col-md-offset-3">
+                    <button on-click="recordingService.cancel()" class="btn btn-primary btn-lg btn-full">Abbrechen</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

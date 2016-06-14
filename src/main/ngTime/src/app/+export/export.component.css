@@ -1,0 +1,21 @@
+.export-header{
+    font-weight: bold;
+}
+
+tr td.export-cell:nth-child(1){
+    width: 100px;
+}
+tr td.export-cell:nth-child(2){
+    width: 300px;
+}
+tr td.export-cell:nth-child(3){
+    width: 100px;
+}
+tr td.export-cell:nth-child(4){
+    width: 400px;
+}
+
+.export-cell
+{
+    padding:5px 0px;
+}
